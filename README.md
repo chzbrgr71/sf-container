@@ -1,8 +1,10 @@
-This will contain some sample container apps for Azure Service Fabric
+Demo container apps for Azure Service Fabric
 
 ## Background
 
-## Commands to deploy app
+## Instructions
+
+# CLI commands to deploy app
 
   ```
   azuresfcli servicefabric cluster connect http://localhost:19080
