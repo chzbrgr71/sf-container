@@ -4,8 +4,7 @@ Demo container apps for Azure Service Fabric
 
 ## Instructions
 
-# CLI commands to deploy app
-
+CLI commands to deploy app
   ```
   azuresfcli servicefabric cluster connect http://localhost:19080
   azuresfcli servicefabric application-package copy hello-world fabric:ImageStore
