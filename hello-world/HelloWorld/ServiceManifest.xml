@@ -7,7 +7,7 @@
   <CodePackage Name="Code" Version="1.0">
     <EntryPoint>
       <ContainerHost>
-        <ImageName>chzbrgr71/go-web</ImageName>
+        <ImageName>tutum/hello-world</ImageName>
         <Commands></Commands>
       </ContainerHost>
     </EntryPoint>
