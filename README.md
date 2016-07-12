@@ -1,6 +1,7 @@
 Demo container apps for Azure Service Fabric
 
 ## Background
+This app uses a golang web container showing some basic info about the container.
 
 ## Instructions
 

@@ -5,7 +5,7 @@
   xmlns="http://schemas.microsoft.com/2011/01/fabric"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   >
-  <Description>Tutum HelloWorld</Description>
+  <Description>Golang HelloWorld</Description>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="HelloWorld" ServiceManifestVersion="1.0"/>
   </ServiceManifestImport>
