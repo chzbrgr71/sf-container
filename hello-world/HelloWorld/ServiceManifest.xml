@@ -4,12 +4,17 @@
   <ServiceTypes>
     <StatelessServiceType ServiceTypeName="HelloWorldServiceType"  UseImplicitHost="true"/>
   </ServiceTypes>
-  <CodePackage Name="Code" Version="1.0">
+  <CodePackage Name="go-web.code" Version="1.0">
     <EntryPoint>
       <ContainerHost>
-        <ImageName>tutum/hello-world</ImageName>
+        <ImageName>chzbrgr71/go-web</ImageName>
         <Commands></Commands>
       </ContainerHost>
     </EntryPoint>
   </CodePackage>
+  <Resources>
+    <Endpoints>
+      <Endpoint Name="Endpoint1" UriScheme="http" Port="8080"/>
+    </Endpoints>
+  </Resources>
 </ServiceManifest>

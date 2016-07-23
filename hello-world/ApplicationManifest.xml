@@ -6,11 +6,19 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   >
   <Description>Brian Redmond - HelloWorld</Description>
+  <Parameters>
+    <Parameter Name="ServiceInstanceCount" DefaultValue="2"></Parameter>
+  </Parameters>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="HelloWorld" ServiceManifestVersion="1.0"/>
+    <Policies>
+      <ContainerHostPolicies CodePackageRef="go-web.code">
+        <PortBinding ContainerPort="8001" EndpointRef="Endpoint1"/>
+       </ContainerHostPolicies>
+    </Policies>
   </ServiceManifestImport>
   <ServiceTemplates>
-      <StatelessService ServiceTypeName="HelloWorldServiceType" InstanceCount="1">
+      <StatelessService ServiceTypeName="HelloWorldServiceType" InstanceCount="4">
         <SingletonPartition />
       </StatelessService>
   </ServiceTemplates>
