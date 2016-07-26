@@ -4,7 +4,7 @@
   <ServiceTypes>
     <StatelessServiceType ServiceTypeName="HelloWorldServiceType"  UseImplicitHost="true"/>
   </ServiceTypes>
-  <CodePackage Name="go-web.code" Version="1.0">
+  <CodePackage Name="HelloWorld" Version="1.0">
     <EntryPoint>
       <ContainerHost>
         <ImageName>chzbrgr71/go-web</ImageName>
