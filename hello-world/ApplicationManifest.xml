@@ -13,7 +13,7 @@
     <ServiceManifestRef ServiceManifestName="HelloWorld" ServiceManifestVersion="1.0"/>
     <Policies>
       <ContainerHostPolicies>
-        <PortBinding ContainerPort="8001" EndpointRef="Endpoint1"/>
+        <PortBinding CodePackageRef="Code" ContainerPort="8001" EndpointRef="Endpoint1"/>
        </ContainerHostPolicies>
     </Policies>
   </ServiceManifestImport>
