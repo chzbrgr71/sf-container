@@ -1,11 +1,13 @@
 Demo container apps for Azure Service Fabric
 
 ## Background
-This app uses a golang web container showing some basic info about the container.
+Multiple samples in this repo. 
+1. hello-world: This app uses a golang web container showing some basic info about the container
+2. SimpleContainerApp: Frontend and backend containers showing service discovery and networking
 
 ## Instructions
 
-CLI commands to deploy app
+1. hello-world (CLI commands to deploy hello-world app)
   ```
   azuresfcli servicefabric cluster connect http://localhost:19080
   azuresfcli servicefabric application package copy hello-world fabric:ImageStore
@@ -13,3 +15,19 @@ CLI commands to deploy app
   azuresfcli servicefabric application create fabric:/hwapp1 HelloWorldAppType 1.0
   azuresfcli servicefabric service create --application-name fabric:/hwapp1 --service-name fabric:/hwapp1/hwservice1 --service-type-name HelloWorldServiceType --instance-count 1 --service-kind Stateless --partition-scheme Singleton
   ```
+
+2. SimpleContainerApp
+
+You can deploy the application just as with any other Service Fabric application: 
+
+$ azuresfcli servicefabric application package copy SimpleContainerApp fabric:ImageStore
+$ azuresfcli servicefabric application type register SimpleContainerApp
+$ azuresfcli servicefabric application create fabric:/SimpleContainerApp SimpleContainerApp 1.0
+
+Services can then be created in the Service Fabric explorer, or through the following commands: 
+
+$ azuresfcli servicefabric service create --application-name fabric:/SimpleContainerApp --service-name fabric:/SimpleContainerApp/StatelessBackendService --service-type-name StatelessBackendService --instance-count 1 --service-kind Stateless --partition-scheme Singleton
+$ azuresfcli servicefabric service create --application-name fabric:/SimpleContainerApp --service-name fabric:/SimpleContainerApp/StatelessFrontendService --service-type-name StatelessFrontendService --instance-count 1 --service-kind Stateless --partition-scheme Singleton
+
+Go to <public-ip>:8080 
+
