@@ -2,6 +2,7 @@ Demo container apps for Azure Service Fabric
 
 ## Background
 Multiple samples in this repo. 
+
 1. hello-world: This app uses a golang web container showing some basic info about the container
 2. SimpleContainerApp: Frontend and backend containers showing service discovery and networking
 
@@ -16,18 +17,14 @@ Multiple samples in this repo.
   azuresfcli servicefabric service create --application-name fabric:/hwapp1 --service-name fabric:/hwapp1/hwservice1 --service-type-name HelloWorldServiceType --instance-count 1 --service-kind Stateless --partition-scheme Singleton
   ```
 
-2. SimpleContainerApp
-
-You can deploy the application just as with any other Service Fabric application: 
-
-$ azuresfcli servicefabric application package copy SimpleContainerApp fabric:ImageStore
-$ azuresfcli servicefabric application type register SimpleContainerApp
-$ azuresfcli servicefabric application create fabric:/SimpleContainerApp SimpleContainerApp 1.0
-
-Services can then be created in the Service Fabric explorer, or through the following commands: 
-
-$ azuresfcli servicefabric service create --application-name fabric:/SimpleContainerApp --service-name fabric:/SimpleContainerApp/StatelessBackendService --service-type-name StatelessBackendService --instance-count 1 --service-kind Stateless --partition-scheme Singleton
-$ azuresfcli servicefabric service create --application-name fabric:/SimpleContainerApp --service-name fabric:/SimpleContainerApp/StatelessFrontendService --service-type-name StatelessFrontendService --instance-count 1 --service-kind Stateless --partition-scheme Singleton
+2. SimpleContainerApp 
+  ```
+  azuresfcli servicefabric application package copy SimpleContainerApp fabric:ImageStore
+  azuresfcli servicefabric application type register SimpleContainerApp
+  azuresfcli servicefabric application create fabric:/SimpleContainerApp SimpleContainerApp 1.0
+  azuresfcli servicefabric service create --application-name fabric:/SimpleContainerApp --service-name fabric:/SimpleContainerApp/StatelessBackendService --service-type-name StatelessBackendService --instance-count 1 --service-kind Stateless --partition-scheme Singleton
+  azuresfcli servicefabric service create --application-name fabric:/SimpleContainerApp --service-name fabric:/SimpleContainerApp/StatelessFrontendService --service-type-name StatelessFrontendService --instance-count 1 --service-kind Stateless --partition-scheme Singleton
+  ```
 
 Go to <public-ip>:8080 
 
