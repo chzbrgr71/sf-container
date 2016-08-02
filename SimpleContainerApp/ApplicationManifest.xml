@@ -6,7 +6,7 @@
     <ServiceManifestImport>
         <ServiceManifestRef ServiceManifestName="FrontendServicePackage" ServiceManifestVersion="1.0"/>
       <EnvironmentOverrides CodePackageRef="FrontendService.Code">
-        <EnvironmentVariable Name="PublicIP" Value="briarsflinux-frontend.eastus.cloudapp.azure.com"/>
+        <EnvironmentVariable Name="PublicIP" Value="briarsflinux.eastus.cloudapp.azure.com"/>
         <EnvironmentVariable Name="BackendServiceName" Value="SimpleContainerApp/StatelessBackendService"/>
         <EnvironmentVariable Name="HttpGatewayPort" Value="19080"/>
       </EnvironmentOverrides>

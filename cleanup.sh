@@ -1,0 +1,4 @@
+azuresfcli servicefabric service remove fabric:/SimpleContainerApp/StatelessFrontendService
+azuresfcli servicefabric service remove fabric:/SimpleContainerApp/StatelessBackendService
+azuresfcli servicefabric application remove fabric:/SimpleContainerApp
+azuresfcli servicefabric application type unregister SimpleContainerApp 1.0
