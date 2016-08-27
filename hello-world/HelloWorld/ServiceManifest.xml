@@ -14,7 +14,7 @@
   </CodePackage>
   <Resources>
     <Endpoints>
-      <Endpoint Name="Endpoint1" UriScheme="http" Port="8080"/>
+      <Endpoint Name="Endpoint1" UriScheme="http" Port="8081"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>
