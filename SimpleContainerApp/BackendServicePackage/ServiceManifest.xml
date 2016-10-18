@@ -11,17 +11,12 @@
             <Commands></Commands>
           </ContainerHost>
         </EntryPoint>
-      <EnvironmentVariables>
-        <EnvironmentVariable Name="PublicIP" Value=""/>
-        <EnvironmentVariable Name="HttpGatewayPort" Value=""/>
-        <EnvironmentVariable Name="BackendServiceName" Value=""/>
-      </EnvironmentVariables>
     </CodePackage>
     <ConfigPackage Name="BackendService.Config" Version="1.0" />
     <DataPackage Name="BackendService.Data" Version="1.0" />
   <Resources>
     <Endpoints>
-      <Endpoint Name="Endpoint1" UriScheme="http" Protocol="tcp"/>
+      <Endpoint Name="Endpoint1" Protocol="tcp" UriScheme="http"/>
     </Endpoints>
   </Resources>
-</ServiceManifest> 
+</ServiceManifest>

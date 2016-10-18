@@ -24,4 +24,4 @@
       <Endpoint Name="Endpoint1" UriScheme="http" Port="8080"/>
     </Endpoints>
   </Resources>
-</ServiceManifest> 
+</ServiceManifest>
