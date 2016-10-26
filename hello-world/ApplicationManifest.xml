@@ -7,7 +7,7 @@
   >
   <Description>Brian Redmond - HelloWorld v1.2</Description>
   <Parameters>
-    <Parameter Name="ServiceInstanceCount" DefaultValue="2"></Parameter>
+    <Parameter Name="ServiceInstanceCount" DefaultValue="1"></Parameter>
   </Parameters>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="HelloWorld" ServiceManifestVersion="1.0"/>
@@ -18,7 +18,7 @@
     </Policies>
   </ServiceManifestImport>
   <ServiceTemplates>
-      <StatelessService ServiceTypeName="HelloWorldServiceType" InstanceCount="4">
+      <StatelessService ServiceTypeName="HelloWorldServiceType" InstanceCount="1">
         <SingletonPartition />
       </StatelessService>
   </ServiceTemplates>
